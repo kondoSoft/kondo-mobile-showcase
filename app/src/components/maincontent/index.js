@@ -39,7 +39,7 @@ var MainContent = (props)=>{
                         </div>
                     </div>
                 </div>
-            </div>ß
+            </div>
         </div>
     </header>
 
@@ -53,13 +53,8 @@ var MainContent = (props)=>{
                     <p className="section-subheading">{app.slogan}</p>
                 </div>
                 <div className="col-md-6">
-                    {/* <div className="video hidden-xs">
-                        <a href="#" data-toggle="modal" data-target="#video-popup" title="Play video">
-                            <i className="fa fa-play-circle-o"></i>
-                        </a>
-                        <img src="img/video.jpg" alt="Video"/>
-                    </div> */}
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/pIAV9gdpsgI" frameborder="0" allowfullscreen></iframe>
+
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/pIAV9gdpsgI" frameBorder="0" allowFullScreen></iframe>
 
                 </div>
                 <div className="visible-xs-block visible-sm-block pt20"></div>
@@ -82,6 +77,51 @@ var MainContent = (props)=>{
             </div>
         </div>
     </section>
+
+
+
+    <section className="content-section-a vertical-center" id="features">
+            <div className="container">
+                <div className="row mb20">
+                    <div className="col-md-12 text-center">
+                        <h2 className="section-heading wow fadeInUp">The App <strong className="text-brand">Features</strong></h2>
+                        <span className="separator"></span>
+                        <p className="section-subheading">{app.features.title}</p>
+                    </div>
+                    <div className="col-sm-3 col-md-4">
+                        <div className="row features-left">
+                          {Object.keys(app.features.features).map((key, i)=>{
+                            if( i == 2 ){
+                              return(
+                                <div key = {key}>
+                                  <div className="visible-xs-block visible-sm-block pt20"></div>
+                                  <div className="col-sm-6 col-md-4">
+                                    <div className="slick-carousel" id="screens-slider">
+                                      <div><img src="img/screen-login.jpg" alt="Screen"/></div>
+                                      <div><img src="img/screen-walkthrough.jpg" alt="Screen"/></div>
+                                      <div><img src="img/screen-profile.jpg" alt="Screen"/></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              )
+                            }
+                            return (
+                            <div key={i} className="col-md-12 feature">
+                              <h3 className="title-features wow fadeInLeft"><i className={`fa fa-lg pull-right ${app.features.features[key].icon}`}></i> {key}</h3>
+                              <p>{app.features.features[key].text}</p>
+                            </div>
+                          )})}
+
+
+                        </div>
+                    </div>
+                    <div className="visible-xs-block visible-sm-block pt20"></div>
+
+                </div>
+            </div>
+        </section>
+
+
 
 
     </div>

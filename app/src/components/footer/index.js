@@ -1,17 +1,17 @@
 import React from 'react'
 
 var Footer = (props)=>{
-  
+
   return(
     <footer>
         <div className="container">
             <div className="row">
                 <div className="col-md-6 col-lg-5 newsletter">
                     <h3>
-                        Subscribe to <strong>Newsletter</strong>
+                        Are you  <strong>Interested?</strong>
                     </h3>
                     <p className="small pt5 pb10">
-                        Lorem ipsum dolor sit amet consectetur adipiscing elit in pulvinar amet lacus sit amet consectetur adipiscing elit in pulvina.
+                        We won't bite! Give us your mail, we shortly contact you, and happly assist you on any matter you need.
                     </p>
 
                     <div className="subscribe-container">
@@ -25,21 +25,16 @@ var Footer = (props)=>{
                 </div>
                 <div className="col-md-6 col-lg-6 col-lg-offset-1">
                     <h3>
-                        Some <strong>Keywords</strong>
+                        Other <strong>Apps</strong>
                     </h3>
                     <ul className="Keywords">
-                        <li><a href="#">Bootstrap template</a></li>
-                        <li><a href="#">Template bootstrap</a></li>
-                        <li><a href="#">HTML5 template</a></li>
-                        <li><a href="#">Modern theme</a></li>
-                        <li><a href="#">Twitter Bootstrap</a></li>
-                        <li><a href="#">Premium theme</a></li>
-                        <li><a href="#">Template premium</a></li>
-                        <li><a href="#">Buy business theme</a></li>
-                        <li><a href="#">Beautiful theme</a></li>
-                        <li><a href="#">Responsive theme</a></li>
-                        <li><a href="#">HTML5 and CSS3</a></li>
-                        <li><a href="#">Landing page</a></li>
+                        <li><a href="#">Kondo Invader</a></li>
+                        <li><a href="#">Easy Light</a></li>
+                        <li><a href="#">Attack of Trump</a></li>
+                        <li><a href="#">Of The wall ARAPAHO</a></li>
+                        <li><a href="#">Nuvote</a></li>
+                        <li><a href="#">Yum</a></li>
+
                     </ul>
                 </div>
             </div>
@@ -48,7 +43,7 @@ var Footer = (props)=>{
                   <hr/>
                 </div>
                 <div className="col-sm-6">
-                    <p className="copyright">Copyright 2016 <i className="fa fa-copyright"></i> Your Company. All Rights Reserved.</p>
+                    <p className="copyright">Copyright 2017 <i className="fa fa-copyright"></i> Kondo Soft. All Rights Reserved.</p>
                 </div>
                 <div className="col-sm-6 text-right">
 
