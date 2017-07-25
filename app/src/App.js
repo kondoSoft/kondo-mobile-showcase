@@ -37,6 +37,7 @@ var base = Rebase.createClass({
 class App extends Component {
   constructor(props){
     super(props)
+    console.log('>>>> ', this.props);
     this.state = {
       app:{
         name:'Que Hacer Merida',
@@ -100,7 +101,9 @@ class App extends Component {
 
 
   componentDidMount(){
-    this.ref = base.syncState('que-hacer-merida', {
+    const {app} = this.props.match.params
+    console.log(app);
+    this.ref = base.syncState(app, {
       context: this,
       state: 'app'
     })
