@@ -7,6 +7,33 @@ import Header from './components/header'
 import Footer from './components/footer'
 import MainContent from './components/maincontent'
 
+//Fire base soon to be relocated
+
+
+import Rebase from 're-base'
+
+// var firebase = require('firebase/app')
+// var database = require('firebase/database')
+//
+// var app = firebase.initializeApp({
+//     apiKey: "AIzaSyAtNngt6o4lStlh88RcwLtq2b5zbUccSXc",
+//     authDomain: "kondo-portfolio.firebaseapp.com",
+//     databaseURL: "https://kondo-portfolio.firebaseio.com",
+//     // projectId: "kondo-portfolio",
+//     storageBucket: "kondo-portfolio.appspot.com",
+//     messagingSenderId: "172379979203"
+// })
+
+// var db = database(app)
+// console.log(db);
+var base = Rebase.createClass({
+    apiKey: "AIzaSyAtNngt6o4lStlh88RcwLtq2b5zbUccSXc",
+    authDomain: "kondo-portfolio.firebaseapp.com",
+    databaseURL: "https://kondo-portfolio.firebaseio.com",
+
+})
+
+
 class App extends Component {
   constructor(props){
     super(props)
@@ -23,35 +50,7 @@ class App extends Component {
         description:'Que Hacer Merida is an mobile app that was made in a month time span, using react native, REDUX, SAGAS and rehydrate. The app uses an Django back end with Django Rest Framework, and it is deployed on a virtual server ready for production.',
         jsTitle:'Javascript all the way',
         jsDescription:'Write it once use it twice, just using JS as code base for IOS & Android.',
-        features:{
-          title:'Find everything you want...',
-          features:{
-            Geolocation:{
-                text:'Every establishment is geolocated, using phone gps.',
-                icon: 'fa-map-marker'
-            },
-            Bookmark:{
-              text:'You can bookmark your favorite restaurant or store.',
-              icon:'fa-heart'
-            },
-            Dynamic_Search:{
-              text:'Due our dinamic search you could find a establishment by name or category.',
-              icon:'fa-search'
-            },
-            Rehydrate:{
-              text: 'Local first tech, you don\'t need to be online to access local data',
-              icon: 'fa-hdd-o'
-            },
-            Responsive:{
-              text:'The code is prepared for any size device.',
-              icon:'fa-tablet'
-            },
-            Ract_Native:{
-              text:'Write it once use it everywhere',
-              icon:'fa-code'
-            }
-          }
-        }
+        features:{title:'sd'},
       },
       menu:[
         {
@@ -70,7 +69,18 @@ class App extends Component {
     }
   }
 
+
+  componentDidMount(){
+    this.ref = base.syncState('kondo-portfolio', {
+      context: this,
+      state: 'app',
+    })
+  }
+  componentWillUpdate(nextProps, nextState){
+
+  }
   render() {
+    console.log(this.state);
     const {menu, app} = this.state
     return (
       <div className="App">
