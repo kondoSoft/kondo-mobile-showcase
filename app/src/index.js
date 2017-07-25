@@ -6,12 +6,15 @@ import registerServiceWorker from './registerServiceWorker';
 
 import { BrowserRouter as Router,
          Route,
-         Link
+         Link,
        } from 'react-router-dom'
 
 const Routing = ()=>(
-  <Router>
-    <Route path='/:app/' component={App}/>
+  <Router >
+    <Route path='/:app/:option?' component={App}>
+      {/* <Route path='./:option' component={App}/> */}
+    </Route>
+
   </Router>
 )
 

@@ -81,6 +81,7 @@ class App extends Component {
           }
         }
       },
+      editable:{},
       menu:[
         {
           name:'Kondo Soft',
@@ -101,8 +102,8 @@ class App extends Component {
 
 
   componentDidMount(){
-    const {app} = this.props.match.params
-    console.log(app);
+    const {app, option} = this.props.match.params
+    console.log(app, option);
     this.ref = base.syncState(app, {
       context: this,
       state: 'app'
