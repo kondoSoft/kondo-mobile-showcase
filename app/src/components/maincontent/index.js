@@ -86,7 +86,7 @@ var MainContent = (props)=>{
                     <div className="col-md-12 text-center">
                         <h2 className="section-heading wow fadeInUp">The App <strong className="text-brand">Features</strong></h2>
                         <span className="separator"></span>
-                        <p className="section-subheading">{app.features.title}</p>
+                        <p className="section-subheading">sdd</p>
                     </div>
                     <div className="col-sm-3 col-md-4">
                         <div className="row features-left">
