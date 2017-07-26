@@ -1,4 +1,5 @@
 import React from 'react'
+import SliderI from '../slider'
 
 
 var MainContent = (props)=>{
@@ -96,11 +97,7 @@ var MainContent = (props)=>{
                                 <div key = {key}>
                                   <div className="visible-xs-block visible-sm-block pt20"></div>
                                   <div className="col-sm-6 col-md-4">
-                                    <div className="slick-carousel" id="screens-slider">
-                                      <div><img src="img/screen-login.jpg" alt="Screen"/></div>
-                                      <div><img src="img/screen-walkthrough.jpg" alt="Screen"/></div>
-                                      <div><img src="img/screen-profile.jpg" alt="Screen"/></div>
-                                    </div>
+                                    <SliderI/>
                                   </div>
                                 </div>
                               )
