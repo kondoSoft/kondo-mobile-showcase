@@ -6522,6 +6522,12 @@ button.close {
 .pull-left {
   float: left !important;
 }
+.pull-feature-right {
+  float: left !important;
+}
+.pull-feature-left {
+  float: right !important;
+}
 .hide {
   display: none !important;
 }

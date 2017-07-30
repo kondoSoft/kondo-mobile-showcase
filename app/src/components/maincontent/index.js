@@ -1,6 +1,7 @@
 import React from 'react'
 import SliderI from '../slider'
 
+import Features from '../features'
 
 var MainContent = (props)=>{
   const { app } = props
@@ -90,32 +91,19 @@ var MainContent = (props)=>{
                         <p className="section-subheading">sdd</p>
                     </div>
                     <div className="col-sm-3 col-md-4">
-                        <div className="row features-left">
-                          {Object.keys(app.features.features).map((key, i)=>{
-                            if( i == 2 ){
-                              return(
-                                <div key = {key}>
-                                  <div className="visible-xs-block visible-sm-block pt20"></div>
-                                  <div className="col-sm-6 col-md-4">
-                                    <SliderI/>
-                                  </div>
-                                </div>
-                              )
-                            }
-                            return (
-                            <div key={i} className="col-md-12 feature">
-                              <h3 className="title-features wow fadeInLeft"><i className={`fa fa-lg pull-right ${app.features.features[key].icon}`}></i> {key}</h3>
-                              <p>{app.features.features[key].text}</p>
-                            </div>
-                          )})}
-
-
-                        </div>
+                      <Features left features={app.features.features}/>
+                    </div>
+                    <div className="col-sm-3 col-md-4">
+                      <SliderI/>
+                    </div>
+                    <div className="col-sm-3 col-md-4">
+                      <Features right features={app.features.features}/>
+                    </div>
+                        
                     </div>
                     <div className="visible-xs-block visible-sm-block pt20"></div>
 
                 </div>
-            </div>
         </section>
 
 
